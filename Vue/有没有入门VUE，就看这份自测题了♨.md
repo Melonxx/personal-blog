@@ -291,7 +291,7 @@ C: v-for 在遍历对象时，是按 Object.keys() 的结果遍历，但是不�
 3.  删除其中一个 true
 4.  发现依然有两个 true
 
-![](./images/vue-test/vue-test_(1).gif)
+![](./images/vue-examination/vue-examination_(1).gif)
 
 #####请问出现 BUG 的原因是？（说出解决这个 BUG 的关键点即可，答案是一个英文单词）
 
@@ -334,7 +334,7 @@ C: 页面中显示 1 0
 <button @click=add>add</button>
 </div>
 ```
-![](.images/vue-test/vue-test_(2).png)
+![](.images/vue-examination/vue-examination_(2).png)
 
 #####点击 add 后发现 child 组件全都位于 table 外面，请问是什么原因？
 A: html 中 table 的子元素不能是 child，因此 child 被解析到 table 的外面了
