@@ -112,7 +112,7 @@ console.log(7)
 console.log(8)
 
 // 类似等价于
-await Promise.resolve().then(() => console.log('t2p'))
+Promise.resolve().then(() => console.log('t2p'))
   .then(() => {
     console.log(7)
     console.log(8)
