@@ -6,7 +6,7 @@
 
 首先我们先来看一段 `js` [原生代码](https://jsbin.com/tiyowiy/3/edit?html,js,output)。
 
-![](./images/react-origin/react-origin_(1).png)
+![](https://upload-images.jianshu.io/upload_images/5780538-9e889a9bef0aaa16.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 这是一段很简单的代码，用于操作 `result` 的增减，
@@ -14,7 +14,7 @@
 让我们来抽象的看待这个问题，
 画个图来表示：
 
-![](./images/react-origin/react-origin_(2).png)
+![](https://upload-images.jianshu.io/upload_images/5780538-e8a078be6b0b7267.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 - 不管你使用原生 `js` 还是 `jq` 都要通过dom提供的 `API`，经历先从页面取到内容，然后经过 `js` 操作以后再填回去。
 - `react` 同学认为这太智障了，虽然简单，但是能不能砍掉上面的步骤(从dom取内容)或下面的步骤(填回内容)呢，从而更简便呢？
@@ -25,11 +25,11 @@
 
 根据上图的操作在页面中加入一个 `span`
 
-![](./images/react-origin/react-origin_(3).png)
+![](https://upload-images.jianshu.io/upload_images/5780538-505ae94d9a8eb3fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 然后为了加个按钮（为了简化先在页面中手动增加）
 
-![](./images/react-origin/react-origin_(4).png)
+![](https://upload-images.jianshu.io/upload_images/5780538-cb71bf10d6c550a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 目前代码有点粗糙，但是为了简单明了演示上图的理念。
 1. 在 `js` 中生成对象插入到页面中
@@ -37,7 +37,7 @@
 
 接着我们开始优化一下[上图代码](https://jsbin.com/meticaf/1/edit?html,js,output)，并把按钮也放入 `js` 代码中：
 
-![](./images/react-origin/react-origin_(5).png)
+![](https://upload-images.jianshu.io/upload_images/5780538-6ade424434a66d51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 但是炸一看[这代码](https://jsbin.com/vevavur/1/edit?html,js,output)还是很傻`*`，于是我们继续来 **分三步** 更层次优化代码
 
@@ -46,14 +46,14 @@
 
 于是代码就变成了这个样子：
 
-![](./images/react-origin/react-origin_(6).png)
+![](https://upload-images.jianshu.io/upload_images/5780538-ec10ea25b4521458.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 具有一双慧眼的你，应该也看的出来这样的代码很像一种东西把...
 
 这也就是 `react` 最聪明的一点优化，
 
-![请先忽略变量的转换](./images/react-origin/react-origin_(7).png)
+![请先忽略变量的转换](https://upload-images.jianshu.io/upload_images/5780538-b43de84ae232a928.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 我们惊讶的发现，这样的 `js` 代码和 `HTML` 标签上并没有什么区别，
@@ -61,9 +61,10 @@
 这样一来，最终的结果就是我们通过写下面的代码来替换（也就是等价于）上面的代码。
 经过 `react` 同学一番折腾，`JSX` 语法上线了 （**敲黑板，重点**：我们并不是在写HTML代码，而是用HTML的形式来写JS代码）
 
-Finally，代码变成了[这样子](https://jsbin.com/vudezis/10/edit?html,js,output)（`react` 最终的样子）
+Finally，代码变成了[这样子](https://jsbin.com/vudezis/14/edit?html,js,output)（`react` 最终的样子）
 
-![](./images/react-origin/react-origin_(8).png)
+![](https://upload-images.jianshu.io/upload_images/5780538-1299db726584b79c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 本文完。
 
