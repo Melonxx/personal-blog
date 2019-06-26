@@ -1,10 +1,10 @@
 # *2019/6/24*
 - # Find The Parity Outlier
-> [2, 4, 0, 100, 4, 11, 2602, 36]
-> Should return: 11 (the only odd number)
-> 
-> [160, 3, 1719, 19, 11, 13, -21]
-> Should return: 160 (the only even number)
+> [2, 4, 0, 100, 4, 11, 2602, 36]  
+> Should return: 11 (the only odd number)  
+>   
+> [160, 3, 1719, 19, 11, 13, -21]  
+> Should return: 160 (the only even number)  
 ```
 // mine
 function findOutlier(int){
@@ -28,17 +28,17 @@ function findOutlier(int){
 ```
 
 - # Format a string of names like 'Bart, Lisa & Maggie'
-> list([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'} ])
-> // returns 'Bart, Lisa & Maggie'
+> list([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'} ])  
+> // returns 'Bart, Lisa & Maggie'  
 > 
-> list([ {name: 'Bart'}, {name: 'Lisa'} ])
-> // returns 'Bart & Lisa'
+> list([ {name: 'Bart'}, {name: 'Lisa'} ])  
+> // returns 'Bart & Lisa'  
 > 
-> list([ {name: 'Bart'} ])
-> // returns 'Bart'
+> list([ {name: 'Bart'} ])  
+> // returns 'Bart'  
 > 
-> list([])
-> // returns ''
+> list([])  
+> // returns ''  
 
 ```
 // mine
@@ -70,8 +70,8 @@ function list(names){
 ```
 
 - # Jaden Casing Strings
->Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
->Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
+> Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"  
+> Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"  
 
 ```
 // mine
@@ -89,9 +89,9 @@ String.prototype.toJadenCase = function () {
 ```
 # *2019/6/25*
 - # Sum of the first nth term of Series
-> SeriesSum(1) => 1 = "1.00"
-> SeriesSum(2) => 1 + 1/4 = "1.25"
-> SeriesSum(5) => 1 + 1/4 + 1/7 + 1/10 + 1/13 = "1.57"
+> SeriesSum(1) => 1 = "1.00"  
+> SeriesSum(2) => 1 + 1/4 = "1.25"  
+> SeriesSum(5) => 1 + 1/4 + 1/7 + 1/10 + 1/13 = "1.57"  
 
 ```
 // mine
@@ -126,7 +126,7 @@ function XO(str) {
 }
 ```
 - # Equal Sides Of An Array
-> 找到一个索引N，其中N左边的整数和等于右边的整数和，如果没有请返回 `-1`
+> 找到一个索引N，其中N左边的整数和等于右边的整数和，如果没有请返回 `-1`  
 > ```
 > Test.assertEquals(findEvenIndex([1,2,3,4,3,2,1]),3, "The array was: [1,2,3,4,3,2,1] \n");
 > Test.assertEquals(findEvenIndex([1,100,50,-51,1,1]),1, "The array was: [1,100,50,-51,1,1] \n");
@@ -158,9 +158,9 @@ function findEvenIndex(arr)
 }
 ```
 - # Does my number look big in this?
-> 自恋数是一个数字，它是自己数字的总和，每个数字都增加到给定基数中的数字位数。
-> 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
-> 1^4 + 6^4 + 3^4 + 4^4 = 1 + 1296 + 81 + 256 = 1634
+> 自恋数是一个数字，它是自己数字的总和，每个数字都增加到给定基数中的数字位数。  
+> 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153  
+> 1^4 + 6^4 + 3^4 + 4^4 = 1 + 1296 + 81 + 256 = 1634  
 ```
 // mine
 function narcissistic(value) {
@@ -176,8 +176,8 @@ function narcissistic( value ) {
 }
 ```
 - # IQ Test
->iqTest("2 4 7 8 10") => 3 // Third number is odd, while the rest of the numbers are even
->iqTest("1 2 1 1") => 2 // Second number is even, while the rest of the numbers are odd
+>iqTest("2 4 7 8 10") => 3 // Third number is odd, while the rest of the numbers are even  
+>iqTest("1 2 1 1") => 2 // Second number is even, while the rest of the numbers are odd  
 ```
 // mine
 function iqTest(numbers){
