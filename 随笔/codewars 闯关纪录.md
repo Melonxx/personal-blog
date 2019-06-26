@@ -71,7 +71,7 @@ function list(names){
 
 - # Jaden Casing Strings
 >Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
-Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
+>Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 
 ```
 // mine
@@ -177,7 +177,7 @@ function narcissistic( value ) {
 ```
 - # IQ Test
 >iqTest("2 4 7 8 10") => 3 // Third number is odd, while the rest of the numbers are even
-iqTest("1 2 1 1") => 2 // Second number is even, while the rest of the numbers are odd
+>iqTest("1 2 1 1") => 2 // Second number is even, while the rest of the numbers are odd
 ```
 // mine
 function iqTest(numbers){
