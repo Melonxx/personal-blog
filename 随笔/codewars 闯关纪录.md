@@ -175,3 +175,28 @@ function narcissistic( value ) {
     }, 0) == value;
 }
 ```
+- # IQ Test
+>iqTest("2 4 7 8 10") => 3 // Third number is odd, while the rest of the numbers are even
+iqTest("1 2 1 1") => 2 // Second number is even, while the rest of the numbers are odd
+```
+// mine
+function iqTest(numbers){
+  const arr = numbers.split(' ').map(v => v%2 === 0)
+  for(let i=0;i<arr.length;i++){
+    if(arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i])){
+      return i+1
+    }  
+  }
+}
+```
+```
+// the best
+function iqTest(numbers){
+  numbers = numbers.split(" ").map(function(el){return parseInt(el)});
+  
+  var odd = numbers.filter(function(el){ return el % 2 === 1});
+  var even = numbers.filter(function(el){ return el % 2 === 0});
+  
+  return odd.length < even.length ? (numbers.indexOf(odd[0]) + 1) : (numbers.indexOf(even[0]) + 1);
+}
+```
