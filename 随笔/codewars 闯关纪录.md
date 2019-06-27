@@ -265,3 +265,20 @@ function solution(number){
   return ans;
 }
 ```
+- # Stop gninnipS My sdroW!
+> spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw"   
+> spinWords( "This is a test") => returns "This is a test"  
+> spinWords( "This is another test" )=> returns "This is rehtona test"
+> 翻转长度大于等于5的单词
+```
+// mine
+function spinWords(str){
+   return str.split(' ').map(v => v.length>=5 ? v.split('').reverse().join('') : v ).join(' ')
+}
+```
+```
+// the best
+function spinWords(string){
+  return string.replace(/\w{5,}/g, function(w) { return w.split('').reverse().join('') })
+}
+```
