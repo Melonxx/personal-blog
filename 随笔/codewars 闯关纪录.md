@@ -282,3 +282,60 @@ function spinWords(string){
   return string.replace(/\w{5,}/g, function(w) { return w.split('').reverse().join('') })
 }
 ```
+# *2019/6/28*
+- # Persistent Bugger  
+> ```
+>  persistence(39) === 3 // because 3*9 = 27, 2*7 = 14, 1*4=4
+>                        // and 4 has only one digit
+> 
+>  persistence(999) === 4 // because 9*9*9 = 729, 7*2*9 = 126,
+>                         // 1*2*6 = 12, and finally 1*2 = 2
+> 
+>  persistence(4) === 0 // because 4 is already a one-digit number
+> ```
+```
+// mine 
+function persistence(num) {
+  let index = 0
+  let result = num
+  while (result.toString().length !== 1) {
+    console.log(result)
+    result = result.toString().split('').reduce((acc, cur) => acc*cur, 1)
+    index += 1
+  }
+  return index
+}
+```
+```
+// the best
+const persistence = num => {
+  return `${num}`.length > 1 
+    ? 1 + persistence(`${num}`.split('').reduce((a, b) => a * +b)) 
+    : 0;
+}
+```
+- # Is a number prime
+> is_prime(1)  /* false */  
+> is_prime(2)  /* true  */  
+> is_prime(-1) /* false */  
+> 是否为质数
+```
+// mine
+function isPrime(num) {
+  let result = 0
+  for (let i=1;i<=num;i++){
+    num % i === 0 ? result += 1 : null
+  }
+  return result === 2
+}
+// function isPrime(num) {
+//   return [...Array(num).keys()].reduce((acc, cur, index) => num%(index+1)===0?acc+=1:acc,0) === 2
+// } // 此方法会出现数组最大长度BUG
+```
+```
+// the best
+function isPrime(num) {
+  for (var i = 2; i < num; i++) if (num % i == 0) return false;
+  return num >= 2; 
+}
+```
