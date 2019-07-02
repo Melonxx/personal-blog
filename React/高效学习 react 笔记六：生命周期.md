@@ -2,16 +2,16 @@
 
 ![](https://upload-images.jianshu.io/upload_images/5780538-ac6bc792f35118b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-constructor
-componentWillMount
-render
-componentDidMount
-componentShouldUpdate
-componentWillUpdate
-render
-componentDidUpdate
-componentWillUnmount
-componentWillReceiveProps
+constructor  
+componentWillMount  
+render  
+componentDidMount  
+componentShouldUpdate  
+componentWillUpdate  
+render  
+componentDidUpdate  
+componentWillUnmount  
+componentWillReceiveProps  
 
 所以，React v16.3之后的生命周期函数一览图成了这样。
 
