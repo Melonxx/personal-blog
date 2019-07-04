@@ -66,6 +66,57 @@ react 里的 css 方案
 
 这好像有点强迫症的感觉~，但是现实就是这就是 `react` 世界里目前最流行的一种方案。
 
+##### 还有一个就是现在 `react cli` 已经自带的 `css module` 方案 
+
+1.首先正常编写 `css` 文件并命名为xx.module.css
+2.引入
+3.用js对象的形式取出css
+
+css:
+```
+.color {
+  color: red;
+}
+```
+js:
+```
+import styles from "./styles.module.css";
+<h1 className={styles.color}>ello React(Bar)</h1>
+```
+
+![](https://upload-images.jianshu.io/upload_images/5780538-d1dd82ca6abfc1ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+可以看到这里打印出来的对象，键就是我们编写的css类名，而值就是随机生成的css类名，
+
+这样一来也同样达到了我们想要的效果。
+
+如果一个元素要同时具有多个类名那么可以使用 `composes`
+此时可以这么编写css文件
+```
+.color {
+  color: red;
+}
+.Bar {
+  font-family: sans-serif;
+  text-align: center;
+  color: green;
+  composes: color;
+}
+```
+```
+<h1 className={styles.Bar}>ello React(Bar)</h1>
+```
+![](https://upload-images.jianshu.io/upload_images/5780538-3c470fa2537f1fb5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+这样就让一个元素同时具有两个类名
+
+> 在react世界里使用css真是一件麻烦事儿，这点还真比不上vue的scope
+
+
+
+
+
+
 
 
 
