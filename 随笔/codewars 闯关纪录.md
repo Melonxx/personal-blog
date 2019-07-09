@@ -373,3 +373,37 @@ function anagrams(word, words) {
   });
 }
 ```
+# *2019/7/9*
+
+- # Permutations
+>您必须创建输入字符串的所有排列并删除重复项（如果存在）。
+> ```
+> permutations('a'); // ['a']
+> permutations('ab'); // ['ab', 'ba']
+> permutations('aabb'); // ['aabb', 'abab', 'abba', 'baab', 'baba', 'bbaa']
+> ```
+```
+// mine  
+function permutations(string) {
+  let array = string.split('')
+  let arr = []
+  for (let i = 0; i < 10000; i++) {
+    let str = array.sort(() => {
+      return Math.random() - 0.5
+    }).join('')
+    arr.push(str)
+  }
+  return Array.from(new Set(arr))
+}
+```
+```
+// the best
+function permutations(str) {
+ return (str.length <= 1) ? [str] :
+         Array.from(new Set(
+           str.split('')
+              .map((char, i) => permutations(str.substr(0, i) + str.substr(i + 1)).map(p => char + p))
+              .reduce((r, x) => r.concat(x), [])
+         ));
+}
+```
