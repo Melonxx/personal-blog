@@ -407,3 +407,32 @@ function permutations(str) {
          ));
 }
 ```
+
+# *2019/7/14*
+- # First non-repeating character
+> 'a' => 'a'   
+> 'stress' => 't'   
+> 'Moonmen' => 'e'  
+```
+// mine
+function firstNonRepeatingLetter(s) {
+  const result = []
+  s.toLowerCase().split('').filter((v,i,arr) => {
+    if( arr.indexOf(v) === arr.lastIndexOf(v) ) { 
+      console.log(v, i, s.split('')[i])
+      result.push(s.split('')[i])
+    }
+  })
+  return result[0] || ''
+}
+```
+```
+// the best
+function firstNonRepeatingLetter(s) {
+  var t=s.toLowerCase();
+  for (var x=0;x<t.length;x++)
+    if(t.indexOf(t[x]) === t.lastIndexOf(t[x]))
+      return s[x];
+  return "";
+}
+```
