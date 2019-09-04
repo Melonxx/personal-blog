@@ -101,7 +101,7 @@
 ## 十八、 [:focus-visible](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:focus-visible)
 > 使其仅在键盘(tab)操作时才显示焦点样式 **暂无浏览器支持**
 ## 十九、 [:focus-within](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:focus-within)
-> 该元素的后代元素获得焦点 [栗子](https://codepen.io/melonxx/pen/qwjRBG?&editable=true)
+> 捕捉元素的后代元素获得焦点事件 [栗子](https://codepen.io/melonxx/pen/qwjRBG?&editable=true)
 ## 二十、 [:fullscreen](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:fullscreen)
 > fullscreen应用于当前处于全屏显示模式的元素。 它不仅仅选择顶级元素，还包括所有已显示的栈内元素
 其对于背景的控制优先级大于 `::backdrop`
