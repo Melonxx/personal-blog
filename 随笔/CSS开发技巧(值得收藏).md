@@ -70,6 +70,7 @@
 
 ![](https://upload-images.jianshu.io/upload_images/5780538-9b6b0d979b756dde.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+
 ## 9.使用margin-left排版左重右轻列表
 
 *   要点：使用`flexbox横向布局`时，最后一个元素通过`margin-left:auto`实现向右对齐
@@ -78,6 +79,7 @@
 *   代码：[在线演示](http://js.jirengu.com/nocuh/3/edit?html,css,output)
 
 ![](https://upload-images.jianshu.io/upload_images/5780538-97dd9f8460b0bb0c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 ## 10.使用overflow-scrolling支持弹性滚动
 
